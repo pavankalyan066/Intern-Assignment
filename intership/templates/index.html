@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data scientist Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, label {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 13px;
+      color: #666;
+      line-height: 22px;
+      }
+      legend {
+      color: #fff;
+      background-color: #095484;
+      padding: 3px 5px;
+      font-size: 20px;
+      }
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 36px;
+      color: #fff;
+      z-index: 2;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 0 20px 0  #095484;
+      }
+      .banner {
+      position: relative;
+      height: 320px;
+      background-image:("work_pic");
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      input[type="date"] {
+      padding: 4px 5px;
+      }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color:#095484;
+      }
+      .item input:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 6px 0 #095484;
+      color:#095484;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .item span {
+      color: red;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color: #095484;
+      }
+      .item i {
+      right: 2%;
+      top: 30px;
+      z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #4286f4;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .city-item input,.name-item div {
+      width: calc(50% - 20px);
+      }
+      .name-item div input {
+      width:97%;}
+      .name-item div label {
+      display:block;
+      padding-bottom:5px;
+      }
+      }
+
+    </style>
+</head>
+<body>
+<div class="testbox">
+    <form name="bot" action="." method=post>
+        <div class="banner">
+            <h1>Data Scientist Application</h1>
+        </div>
+        <p>Please fill out with the information that is requested below and submit to check your eligibility for
+            position of Data scientist. Thank you!</p>
+        <hr/>
+        <fieldset>
+            <legend>Basic Information</legend>
+            <div class="item">
+                <label for="name">Enter Name<span></span></label>
+                <input id="name" type="text" name="name" required/>
+            </div>
+            <div class="item">
+                <label for="name">Enter Number<span></span></label>
+                <input id="name1" type="tel" name="number" required/>
+            </div>
+            <div class="item">
+                <div class="name-item">
+                    <div>
+                        <input type="text" name="UG" placeholder="UG"/>
+                    </div>
+                    <div>
+                        <input type="text" name="UGYear" placeholder="UG Year"/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="name-item">
+                        <div>
+                            <input type="text" name="PG" placeholder="PG"/>
+                        </div>
+                        <div>
+                            <input type="text" name="PGYear" placeholder="PG Year"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Primary Skills Self Rating</legend>
+            <div class="item">
+                <div class="name-item">
+                    <input id="python" type="text" name="python" placeholder="Python(1-3)" >
+                    <input id="r" type="text" name="r" placeholder="R-programming(1-3)" >
+                    <input id="ds" type="text" name="ds" placeholder="Data science(1-3)" >
+                </div>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Additional Skills</legend>
+            <div class="item">
+                <div class="name-item">
+                    <input id="ml" type="text" name="ml" placeholder="Machine Learning" >
+                    <input id="dl" type="text" name="dl" placeholder="Deep Learning" >
+                    <input id="nlp" type="text" name="nlp" placeholder="NLP" >
+                    <input id="sm" type="text" name="sm" placeholder="Statistical Modeling" >
+                    <input id="aws" type="text" name="aws" placeholder="AWS" >
+                    <input id="sql" type="text" name="sql" placeholder="SQL/NoSQL" >
+                    <input id="excel" type="text" name="excel" placeholder="Excel">
+                </div>
+            </div>
+        </fieldset>
+            <fieldset>
+                <div class="btn-block">
+                    <button type="submit">Cancel</button>
+                    <input type="submit" value="submit">
+                </div>
+            </fieldset>
+    </form>
+</div>
+</body>
+</html>
